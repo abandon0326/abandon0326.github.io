@@ -24,8 +24,9 @@
 <meta property="og:description" content="python3爬虫遇到emoji 表情字符 或特殊字符时 无法将字符写入到文本文件。python2 123456789dc&#x3D;&amp;#x27;%uD83C%uDF52%uD83C%uDF52%20%u5C0F%u6A31%u5B50&amp;#x27; #爬取到的unicode格式字符串  原型(🍒🍒小樱子)dc&#x3D;dc.replace(&quot;%&quot;,&quot;\\&quot;)		#转换格式">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-07T11:03:00.000Z">
-<meta property="article:modified_time" content="2021-12-07T11:48:47.838Z">
+<meta property="article:modified_time" content="2022-03-01T05:07:59.696Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -78,7 +79,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>luckfoxer~~~</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -196,7 +197,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      undefined 字
+      949 字
     </span>
   
 
@@ -205,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      NaN 分钟
+      8 分钟
     </span>
   
 
@@ -238,13 +239,13 @@
             
             <div class="markdown-body">
               <h3 id="python3爬虫遇到emoji-表情字符-或特殊字符时-无法将字符写入到文本文件。"><a href="#python3爬虫遇到emoji-表情字符-或特殊字符时-无法将字符写入到文本文件。" class="headerlink" title="python3爬虫遇到emoji 表情字符 或特殊字符时 无法将字符写入到文本文件。"></a>python3爬虫遇到emoji 表情字符 或特殊字符时 无法将字符写入到文本文件。</h3><p>python2</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dc=&#x27;%uD83C%uDF52%uD83C%uDF52%20%u5C0F%u6A31%u5B50&#x27; </span><br><span class="line">#爬取到的unicode格式字符串  原型(🍒🍒小樱子)</span><br><span class="line"></span><br><span class="line">dc=dc.replace(&quot;%&quot;,&quot;\\&quot;)		#转换格式</span><br><span class="line">dc=dc.decode(&quot;unicode_escape&quot;)	#unicode_escape   编码适合作为 ASCII 编码的 Python 源代码中的 Unicode 文字的内容，但引号不会被转义。从 Latin-1 源代码解码。</span><br><span class="line"></span><br><span class="line">dc=dc.encode(&quot;utf-8&quot;)</span><br><span class="line">with open(&quot;1.txt&quot;,&#x27;a+&#x27;) as f:</span><br><span class="line">	f.write(dc)</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">dc</span>=&#x27;%uD<span class="hljs-number">83</span>C%uDF<span class="hljs-number">52</span>%uD<span class="hljs-number">83</span>C%uDF<span class="hljs-number">52</span>%<span class="hljs-number">20</span>%u<span class="hljs-number">5</span>C<span class="hljs-number">0</span>F%u<span class="hljs-number">6</span>A<span class="hljs-number">31</span>%u<span class="hljs-number">5</span>B<span class="hljs-number">50</span>&#x27; <br><span class="hljs-comment">#爬取到的unicode格式字符串  原型(🍒🍒小樱子)</span><br><br><span class="hljs-attribute">dc</span>=dc.replace(<span class="hljs-string">&quot;%&quot;</span>,<span class="hljs-string">&quot;\\&quot;</span>)		#转换格式<br><span class="hljs-attribute">dc</span>=dc.decode(<span class="hljs-string">&quot;unicode_escape&quot;</span>)	#unicode_escape   编码适合作为 ASCII 编码的 Python 源代码中的 Unicode 文字的内容，但引号不会被转义。从 Latin-<span class="hljs-number">1</span> 源代码解码。<br><br><span class="hljs-attribute">dc</span>=dc.encode(<span class="hljs-string">&quot;utf-8&quot;</span>)<br><span class="hljs-attribute">with</span> open(<span class="hljs-string">&quot;1.txt&quot;</span>,&#x27;a+&#x27;) as f:<br>	<span class="hljs-attribute">f</span>.write(dc)<br></code></pre></td></tr></table></figure>
 <hr>
 <p>同样的代码 因为python2 与 python3 的一些特性 导致python3下写入文本出错。</p>
 <p>原理很简单,特性有点烦人。</p>
 <hr>
 <p>python3</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tmp=&#x27;%uD83C%uDF52%uD83C%uDF52%20%u5C0F%u6A31%u5B50&#x27;</span><br><span class="line"></span><br><span class="line">tmp=tmp.replace(&quot;%&quot;,&quot;\\&quot;)</span><br><span class="line">tmp=tmp.encode(&quot;latin_1&quot;).decode(&quot;raw_unicode_escape&quot;).encode(&#x27;utf-16&#x27;,&#x27;surrogatepass&#x27;).decode(&#x27;utf-16&#x27;,&#x27;surrogatepass&#x27;).encode(&quot;raw_unicode_escape&quot;).decode(&quot;unicode_escape&quot;)</span><br><span class="line"></span><br><span class="line">with open(&quot;1.txt&quot;,&#x27;a+&#x27;,encoding=&quot;utf-16&quot;) as f:</span><br><span class="line">	f.write(a)</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs stylus">tmp=<span class="hljs-string">&#x27;%uD83C%uDF52%uD83C%uDF52%20%u5C0F%u6A31%u5B50&#x27;</span><br><br>tmp=tmp<span class="hljs-selector-class">.replace</span>(<span class="hljs-string">&quot;%&quot;</span>,<span class="hljs-string">&quot;\\&quot;</span>)<br>tmp=tmp<span class="hljs-selector-class">.encode</span>(<span class="hljs-string">&quot;latin_1&quot;</span>)<span class="hljs-selector-class">.decode</span>(<span class="hljs-string">&quot;raw_unicode_escape&quot;</span>)<span class="hljs-selector-class">.encode</span>(<span class="hljs-string">&#x27;utf-16&#x27;</span>,<span class="hljs-string">&#x27;surrogatepass&#x27;</span>)<span class="hljs-selector-class">.decode</span>(<span class="hljs-string">&#x27;utf-16&#x27;</span>,<span class="hljs-string">&#x27;surrogatepass&#x27;</span>)<span class="hljs-selector-class">.encode</span>(<span class="hljs-string">&quot;raw_unicode_escape&quot;</span>)<span class="hljs-selector-class">.decode</span>(<span class="hljs-string">&quot;unicode_escape&quot;</span>)<br><br>with open(<span class="hljs-string">&quot;1.txt&quot;</span>,<span class="hljs-string">&#x27;a+&#x27;</span>,encoding=<span class="hljs-string">&quot;utf-16&quot;</span>) as f:<br>	f<span class="hljs-selector-class">.write</span>(a)<br></code></pre></td></tr></table></figure>
 
 <p>写入文件的编码转换重点不在于编码上的转换，写入文件打开的默认编码格式也要注意。</p>
 
@@ -253,6 +254,20 @@
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/python/">python</a>
+                    
+                  </div>
                 
               </div>
               
@@ -342,6 +357,13 @@
      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
   </div>
   
+  <div class="statistics">
+    
+    
+
+    
+  </div>
+
 
   
 
