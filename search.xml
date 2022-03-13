@@ -49,9 +49,9 @@
             
             <tag> shellcode </tag>
             
-            <tag> cobalt strike </tag>
-            
             <tag> C2 </tag>
+            
+            <tag> cobalt strike </tag>
             
         </tags>
       
